@@ -1,13 +1,11 @@
 import React, {useState } from 'react';
 
-// Modal component props interface
 interface NewStudentModalProps {
     isOpen: boolean;
     onClose: () => void;
     onSubmit: (name: string, grade: number) => void;
   }
   
-// New Student Modal Component
 export const NewStudentModal: React.FC<NewStudentModalProps> = ({ isOpen, onClose, onSubmit }) => {
     const [name, setName] = useState('');
     const [grade, setGrade] = useState('');
